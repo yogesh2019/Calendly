@@ -1,10 +1,11 @@
 const express = require('express');
 const app = express();
+const connectDb = require('/config/db')
 require('dotenv').config();
 const swaggerUi = require('swagger-ui-express');
 const swaggerJsDoc = require('swagger-jsdoc');
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 2000;
 const spec = swaggerJsDoc({
     definition: {
         openapi: '3.0.0',
